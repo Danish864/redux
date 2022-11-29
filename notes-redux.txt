@@ -1,0 +1,28 @@
+Why Do We Need to Split Reducers?
+
+1. For fast page loads
+Splitting reducers will have and advantage of loading only required part of web application which in turn makes it very efficient in rendering time of main pages
+
+2. Organization of code
+Splitting reducers on page level or component level will give a better code organization instead of just putting all reducers at one place. Since reducer is loaded only when page/component is loaded will ensure that there are standalone pages which are not dependent on other parts of the application. That ensures seamless development since it will essentially avoid cross-references in reducers and throwing away complexities
+
+3. One page/component
+One reducer design pattern. Things are better written, read and understood when they are modular. With dynamic reducers, it becomes possible to achieve it.
+
+4. SEO
+SEO is a vast topic but it gets hit very hard if your website is having huge response times which happens in case if code is not split. With reducer level code-splitting, reducers can be code split on a split component level which will reduce the loading time of website thereby increasing SEO rankings.
+
+2nd website explanation points: 
+
+Readability
+As the reducer is broken down to individual concerning files, one does not have to use the in-editor Find or dreaded long scrolls to get to the code block of interest.
+
+Cyclic Dependency
+Using a reducer would not end at having just one of them. There will be many. And many reducers will need to work together.
+Reducers work together by cross-referencing each other for the actions and action creators so that they can respond to action properly and change the desired part of the state.
+
+Searchability
+With a Single reducer broken down to multiple files, you can fine-grain your search and pinpoint your work.
+
+Code Review
+With smaller files, it is easier for reviewers to review the code. Which will lead to faster approvals and Code Merge. Hence lower code to deploy time.
